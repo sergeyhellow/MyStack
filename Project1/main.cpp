@@ -4,7 +4,7 @@
 #include "CustomStack.h"
 #include <iostream>
 #include <time.h>
-
+#include "Queue.h"
 
 //
 // Переменная - именованная область памяти
@@ -19,10 +19,8 @@ using namespace std;
 
 int main()
 {
+	Queue Qw;
 	
-	test_stack();
-	cout << endl << endl;
-
 	
 
 	return 0;

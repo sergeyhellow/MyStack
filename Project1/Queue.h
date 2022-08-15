@@ -12,12 +12,12 @@ private:
 
 
 	public:
-	Queue();
+	Queue(int max);
 	~Queue();
 	void Add(int value);// добавить в очередь
 	int Extract();//извлечь из очереди
 	void Clear();// очистить очередь
-	Void Print();//напечатть 
+	void Print();//напечатть 
 	bool IsEmpty();
 	bool IsFull();
 	int Size();
