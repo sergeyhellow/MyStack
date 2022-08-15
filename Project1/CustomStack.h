@@ -4,6 +4,9 @@
 
 #include "stdafx.h"
 
+void test_stack();
+
+
 class CustomStack
 {
 private:
@@ -18,15 +21,15 @@ public:
 	~CustomStack();
 
 
-	void push_up();
-	void delete_up();
-	void delete_index(int index, CustomStack& stack);
-	void swap_elem(int index_up_elem, int index_down_elem, CustomStack& stack);
-	void reverse(CustomStack& stack);
-	void clear(CustomStack& stack);
-	CustomStack Copy ();
-	void del_copy_element(CustomStack &stack);
-	void find_in(CustomStack& stack, int num);
+	void Push(char P_value);
+	char Pop();
+	void Clear();
+	bool IsEmpty();
+	bool IsFull();
+	int  GetCount();
+	void Delete_first();
+	void Print();
+	
 
 	
 
