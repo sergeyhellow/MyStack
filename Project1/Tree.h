@@ -12,12 +12,14 @@ public:
 	int value;
 	
 
+
 	Branch();
-	Branch(int _value);
+	Branch(Branch* _parent, int _value);
 	~Branch();
 
 	void print();
-
+	void Add(int value);
+	bool Delete(int value);
 };
 
 
@@ -31,6 +33,7 @@ public:
 
 	void Print();
 	void Insert(int value);
+	void Delete(int value);
 	
 
 };
