@@ -39,9 +39,9 @@ struct Document
 	SubItem<DOCUMENT_BODY> doc_body;
 
 	Document(DOCUMENT_ID   doc_id,
-		DOCUMENT_NAME doc_name,
-		DOCUMENT_DATE doc_date,
-		DOCUMENT_BODY doc_body)
+		     DOCUMENT_NAME doc_name,
+		     DOCUMENT_DATE doc_date,
+		     DOCUMENT_BODY doc_body) 
 	{
 		this->doc_id.setValue(doc_id);
 		this->doc_name.setValue(doc_name);

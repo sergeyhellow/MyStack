@@ -4,6 +4,8 @@
 
 #include "stdafx.h"
 
+void test_stack();
+
 class CustomStack
 {
 private:
@@ -16,24 +18,14 @@ private:
 public:
 	CustomStack();
 	~CustomStack();
-
-
-	void push_up();
-	void delete_up();
-	void delete_index(int index, CustomStack& stack);
-	void swap_elem(int index_up_elem, int index_down_elem, CustomStack& stack);
-	void reverse(CustomStack& stack);
-	void clear(CustomStack& stack);
-	CustomStack Copy ();
-	void del_copy_element(CustomStack &stack);
-	void find_in(CustomStack& stack, int num);
-
-	
-
-
-
-
-
+	void Print();
+	void Push(char p_value); // Добавление элемента
+	char Pop(); // Извлечение элемента
+	void DeleteDown();
+	void Clear(); // Очистка стека
+	bool IsEmpty(); // Проверка на пустоту
+	bool IsFull(); // Проверка на переполненность
+	int  GetCount(); // Кол-во элементов
 };
 
 #endif

@@ -12,16 +12,16 @@ Item::Item(std::string name)
 	, prev(nullptr)
 	, name(name)
 {
-	cout << "Item("
-		<< name
-		<< ")"
-		<< endl;
+	cout << "Item(" 
+		 << name
+		 << ")"
+		 << endl;
 }
 Item::~Item()
 {
 	cout << "~Item("
-		<< name
-		<< ")\n";
+		 << name
+		 << ")\n";
 }
 void Item::print()
 {
