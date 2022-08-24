@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Item.h"
 #include "List.h"
+#include "io.h"
 #include "CustomStack.h"
 #include "Queue.h"
 #include "Tree.h" // Ѕинарное дерево
@@ -25,11 +26,154 @@ public:
 	TObject() : value(0), priority(0) { }
 };
 
-int main()
+struct SubTree
 {
 
+	int value;
+	SubTree* next;
+	SubTree() : value(0), next(nullptr) {}
+};
+
+
+
+
+class MiniTree
+{
+public:
+	//string name; //им€
+	char name[10];
+	int age; //возраст
+	SubTree* subTree;
+	//MiniTree(string name, int age): name(name), age(age)  {}
+	MiniTree () : subTree(nullptr) {}
+
+};
+
+
+
+
+
+int main()
+{
+	//int res = rename("tree1.txt", "files/tree3.txt");
+	//cout << "res = " << res << endl;
+
+	//res = remove("files/tree3.txt"); // удаление файла
+	//cout << "res = " << res << endl;
+
+	//char path[70];
+
+	//	
+	//cout << "”кажите путь к файлу:  ";
+	//cin >> path;
+	//char mask[15];
+	//cout << "”кажите маску к файлу (*.* или *.txt ) ";
+	//cin >> mask;
+
+
+	// совединив две строки получим результат
+	// то есть что и где хочет найти пользовватель
+
+	FILE* f;
+	fopen_s(&f, "tree1.txt", "a");
+	fclose(f);
+
+	struct _finddata_t c_file;
+
+	intptr_t hFile; // тоже самое что инт
+	hFile = _findfirst("*.cpp", &c_file);
+
+	cout    << "c_file.attrib: "	  << c_file.attrib		<< "\n"
+			<< "c_file.name: "		  << c_file.name		<< "\n"
+			<< "c_file.size: "		  << c_file.size		<< "\n"
+			
+		;
+
+	hFile = _findnext(hFile, &c_file);
+	 cout	<< "c_file.attrib: "	<< c_file.attrib << "\n"
+			<< "c_file.name: "		<< c_file.name <<	"\n"
+			<< "c_file.size: "		<< c_file.size <<	"\n"
+		 ;
+
+
+
+
+	/*SubTree sub_tree1;
+	sub_tree1.value = 10;
+
+
+	MiniTree mini_tree1;
+	mini_tree1.subTree = &sub_tree1;
+	mini_tree1.age = 15;
+	cout << "name ";
+	cin >> mini_tree1.name;
+
+	cout << "&sub_tree1 = " << &sub_tree1 << " sub_tree1.value = " << sub_tree1.value << endl;
+
+	FILE* f;
+
+	fopen_s(&f, "tree1.txt", "w");
+	fwrite(&mini_tree1, sizeof(MiniTree), 1, f);
+	fclose(f); 
+
+	*/
+
+	/*
+
+	SubTree sub_tree1;
+	sub_tree1.value ;
+
+
+	MiniTree mini_tree1;
+	mini_tree1.subTree = &sub_tree1;
+	mini_tree1.age = 0;
+	
+	FILE* f;
+
+	fopen_s(&f, "tree1.txt", "w");
+	fread(&mini_tree1, sizeof(MiniTree), 1, f);
+	fclose(f);
+
+	cout <<"mini_tree1.name = " << mini_tree1.name
+		 << "mini_tree1.age = " << mini_tree1.age
+	     << "mini_tree1.subtree = " << mini_tree1.age
+		 << "&sub_tree1 = "      << &sub_tree1 
+		 << "sub_tree1.value = " << sub_tree1.value << endl;
+
+	*/
+
+
+	/*
+	
+	MiniTree tree1;
+	cout << "name " << endl;
+	cin >> tree1.name;
+	tree1.age = 15;
+	
+	FILE* f; 
+	
+	fopen_s(&f, "tree1.txt", "w");
+	fwrite(&tree1, sizeof(MiniTree), 1, f);
+	fclose(f);*/
+
+
+	/*
+	MiniTree tree2;
+	
+	FILE* f2;
+	fopen_s(&f2, "tree1.txt", "r");
+	fread(&tree2, sizeof(MiniTree), 1, f2);
+	
+	fclose(f2);
+
+	cout << "name " << tree2.name << " age " << tree2.age << endl;
+	
+	*/
+
+
+
 	srand(time(0));
-	test_tree();
+//test_tree();
 	
 	/*Queue* Qu = new Queue(30);
 	int* arr= new int[3];
@@ -51,14 +195,17 @@ int main()
 	std:: cout << count << endl;
 
 	Qu->Print();
-	cout << endl;*/
+	cout << endl;
 	
-	
+	delete arr;
+	delete Qu;*/
 		
 	
-	
+
 
 	//test_text();
+
+
 	/*
 	std::vector<TObject*> vec;
 	for (int i = 0; i < 10; i++)

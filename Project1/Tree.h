@@ -19,6 +19,7 @@ public:
 	void Add(int value);
 	bool Delete(int value);
 	int getSumm(bool summ);
+	void Save_Node();
 };
 // Бинарное дерево
 class Tree
@@ -46,7 +47,7 @@ public:
 	int GetCount(Node* p_node);
 	float getAverageSumm();
 	int CountNode();
-
-
+	void Save_tree();
+	
 };
 #endif

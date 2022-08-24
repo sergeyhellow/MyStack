@@ -185,3 +185,28 @@ int Tree:: CountNode()
 		return root->getSumm(false);
 	return 0;
 };
+
+void Tree::  Save_tree()
+{
+
+}
+
+
+void Node::Save_Node()
+{
+	cout << value << " left=";
+	if (left)
+
+
+		cout << left->value;
+	else
+		cout << "nullptr";
+	cout << " right=";
+	if (right)
+		cout << right->value;
+	else
+		cout << "nullptr";
+	cout << endl;
+	if (left) left->Print();
+	if (right) right->Print();
+}

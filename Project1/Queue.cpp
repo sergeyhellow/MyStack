@@ -39,6 +39,8 @@ void Queue::Clear()
 { 
 	// Ёффективна€ "очистка" очереди
 	CurQueueLength = 0;
+			
+
 }
 void Queue::Print()
 {
